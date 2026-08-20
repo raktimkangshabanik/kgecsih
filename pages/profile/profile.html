@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KGECSIH | Profile</title>
+
+    <link
+        rel="stylesheet"
+        href="/pages/profile/profile.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            K
+        </div>
+
+        <div>
+
+            <h1>KGECSIH</h1>
+
+            <span>
+                Internship Portal
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="user-area">
+
+        <div class="user-info">
+
+            <strong id="navName">
+                Student
+            </strong>
+
+            <span>
+                Profile
+            </span>
+
+        </div>
+
+
+        <div
+            id="avatar"
+            class="avatar"
+        >
+            S
+        </div>
+
+
+        <button
+            id="logoutBtn"
+            class="logout-btn"
+            type="button"
+        >
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PORTAL
+===================================================== -->
+
+<div class="portal-layout">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-profile">
+
+            <div
+                id="sidebarAvatar"
+                class="sidebar-avatar"
+            >
+                S
+            </div>
+
+            <div>
+
+                <strong id="profileName">
+                    Your Profile
+                </strong>
+
+                <span id="profileEmail">
+                    student@email.com
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <button
+                type="button"
+                class="sidebar-item active"
+                data-section="personal"
+            >
+
+                <span class="sidebar-icon">
+                    👤
+                </span>
+
+                <span>
+                    Personal Information
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="professional"
+            >
+
+                <span class="sidebar-icon">
+                    💼
+                </span>
+
+                <span>
+                    Professional Information
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="skills"
+            >
+
+                <span class="sidebar-icon">
+                    🛠
+                </span>
+
+                <span>
+                    Skills
+                </span>
+
+            </button>
+
+
+            <a
+                href="/pages/internship/internship.html"
+                class="sidebar-item"
+                style="text-decoration: none;"
+            >
+                <span class="sidebar-icon">
+                    📋
+                </span>
+
+                <span>
+                    Available Internships
+                </span>
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            KGECSIH Internship Portal
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         CONTENT
+    ================================================== -->
+
+    <main class="content">
+
+
+        <!-- =================================================
+             PERSONAL
+        ================================================== -->
+
+        <section
+            id="personal"
+            class="profile-section active"
+        >
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    PROFILE
+                </span>
+
+                <h2>
+                    Personal Information
+                </h2>
+
+                <p>
+                    Manage your basic personal details.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Personal Details
+                        </h3>
+
+                        <p>
+                            Your basic account information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="edit-actions">
+
+                        <button
+                            type="button"
+                            id="personalEditBtn"
+                            class="edit-btn"
+                        >
+                            Edit
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="personalSaveBtn"
+                            class="save-btn hidden"
+                        >
+                            Save
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="personalCancelBtn"
+                            class="cancel-btn hidden"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="field">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            id="fullName"
+                            type="text"
+                            placeholder="Your full name"
+                            disabled
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            disabled
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+
+                        <div class="phone-input">
+
+                            <span class="phone-prefix">
+                                +91-
+                            </span>
+
+                            <input
+                                id="phone"
+                                type="tel"
+                                inputmode="numeric"
+                                placeholder="90000-00018"
+                                maxlength="11"
+                                disabled
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="location">
+                            Current Location
+                        </label>
+
+                        <input
+                            id="location"
+                            type="text"
+                            placeholder="City, State"
+                            disabled
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    id="message"
+                    class="message"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROFESSIONAL
+        ================================================== -->
+
+        <section
+            id="professional"
+            class="profile-section"
+        >
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    PROFILE
+                </span>
+
+                <h2>
+                    Professional Information
+                </h2>
+
+                <p>
+                    Tell us about your education,
+                    experience and career preferences.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Professional Details
+                        </h3>
+
+                        <p>
+                            This information helps us
+                            find relevant opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="edit-actions">
+
+                        <button
+                            type="button"
+                            id="professionalEditBtn"
+                            class="edit-btn"
+                        >
+                            Edit
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="professionalSaveBtn"
+                            class="save-btn hidden"
+                        >
+                            Save
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="professionalCancelBtn"
+                            class="cancel-btn hidden"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="field">
+
+                        <label for="qualification">
+                            Highest Qualification
+                        </label>
+
+                        <select
+                            id="qualification"
+                            disabled
+                        >
+
+                            <option value="">
+                                Select qualification
+                            </option>
+
+                            <option>
+                                Secondary School
+                            </option>
+
+                            <option>
+                                Higher Secondary
+                            </option>
+
+                            <option>
+                                Diploma
+                            </option>
+
+                            <option>
+                                B.Tech / B.E.
+                            </option>
+
+                            <option>
+                                B.Sc
+                            </option>
+
+                            <option>
+                                B.A.
+                            </option>
+
+                            <option>
+                                B.Com
+                            </option>
+
+                            <option>
+                                B.Ed
+                            </option>
+
+                            <option>
+                                MBBS
+                            </option>
+
+                            <option>
+                                B.Pharm
+                            </option>
+
+                            <option>
+                                M.Tech / M.E.
+                            </option>
+
+                            <option>
+                                M.Sc
+                            </option>
+
+                            <option>
+                                M.A.
+                            </option>
+
+                            <option>
+                                MBA
+                            </option>
+
+                            <option>
+                                PhD
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="fieldOfStudy">
+                            Field / Discipline
+                        </label>
+
+                        <input
+                            id="fieldOfStudy"
+                            type="text"
+                            placeholder="Mechanical Engineering, Physics, Economics..."
+                            disabled
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="graduationYear">
+                            Graduation Year
+                        </label>
+
+                        <input
+                            id="graduationYear"
+                            type="number"
+                            min="1950"
+                            max="2100"
+                            placeholder="2028"
+                            disabled
+                        >
+
+                    </div>
+
+
+                    <div class="field field-full">
+
+                        <label>
+                            Experience
+                        </label>
+
+                        <div id="experienceContainer" class="experience-container"></div>
+
+                        <button
+                            type="button"
+                            id="addExperienceBtn"
+                            class="secondary-add-btn hidden"
+                        >
+                            + Add Experience
+                        </button>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="workPreference">
+                            Work Preference
+                        </label>
+
+                        <select
+                            id="workPreference"
+                            disabled
+                        >
+
+                            <option value="Any">
+                                Any
+                            </option>
+
+                            <option value="On-site">
+                                On-site
+                            </option>
+
+                            <option value="Remote">
+                                Remote
+                            </option>
+
+                            <option value="Hybrid">
+                                Hybrid
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="preferredLocation">
+                            Preferred Work Location
+                        </label>
+
+                        <input
+                            id="preferredLocation"
+                            type="text"
+                            placeholder="Any location"
+                            disabled
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    id="professionalMessage"
+                    class="message"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SKILLS
+        ================================================== -->
+
+        <section
+            id="skills"
+            class="profile-section"
+        >
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    PROFILE
+                </span>
+
+                <h2>
+                    Skills
+                </h2>
+
+                <p>
+                    Add technical, professional and
+                    domain-specific skills.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Your Skills
+                        </h3>
+
+                        <p>
+                            Skills help us match you with
+                            relevant internships.
+                        </p>
+
+                    </div>
+
+
+                    <div class="edit-actions">
+
+                        <button
+                            type="button"
+                            id="skillsEditBtn"
+                            class="edit-btn"
+                        >
+                            Edit
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="skillsSaveBtn"
+                            class="save-btn hidden"
+                        >
+                            Save
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="skillsCancelBtn"
+                            class="cancel-btn hidden"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ADD SKILL -->
+
+                <div class="skill-add-row">
+
+                    <select
+                        id="skillSelect"
+                        disabled
+                    >
+
+                        <option value="">
+                            Select a skill
+                        </option>
+
+                    </select>
+
+                    <input
+                        id="otherSkillInput"
+                        class="hidden"
+                        type="text"
+                        maxlength="100"
+                        placeholder="Enter new skill"
+                        disabled
+                    >
+
+
+                    <select
+                        id="proficiencySelect"
+                        disabled
+                    >
+
+                        <option value="Beginner">
+                            Beginner
+                        </option>
+
+                        <option
+                            value="Intermediate"
+                            selected
+                        >
+                            Intermediate
+                        </option>
+
+                        <option value="Advanced">
+                            Advanced
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        type="button"
+                        id="addSkillBtn"
+                        class="add-skill-btn"
+                        disabled
+                    >
+                        + Add Skill
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="skillsContainer"
+                    class="skills-container"
+                >
+
+                    <div class="loading">
+                        Loading skills...
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="skillMessage"
+                    class="skill-message"
+                ></div>
+
+                <div class="subsection-divider"></div>
+
+                <div class="subsection-header">
+                    <div>
+                        <h4>Languages Known</h4>
+                        <p>Add the languages you know and your proficiency.</p>
+                    </div>
+                </div>
+
+                <div class="language-add-row">
+
+                    <select id="languageSelect" disabled>
+                        <option value="">Select a language</option>
+                        <option>English</option>
+                        <option>Bengali</option>
+                        <option>Hindi</option>
+                        <option>Assamese</option>
+                        <option>Odia</option>
+                        <option>Tamil</option>
+                        <option>Telugu</option>
+                        <option>Marathi</option>
+                        <option>Gujarati</option>
+                        <option>Punjabi</option>
+                        <option>Urdu</option>
+                        <option>Malayalam</option>
+                        <option>Kannada</option>
+                        <option>French</option>
+                        <option>German</option>
+                        <option>Spanish</option>
+                        <option>Other</option>
+                    </select>
+
+                    <input
+                        id="otherLanguageInput"
+                        class="hidden"
+                        type="text"
+                        maxlength="80"
+                        placeholder="Enter language"
+                        disabled
+                    >
+
+                    <select id="languageProficiencySelect" disabled>
+                        <option value="Basic">Basic</option>
+                        <option value="Intermediate" selected>Intermediate</option>
+                        <option value="Fluent">Fluent</option>
+                        <option value="Native">Native</option>
+                    </select>
+
+                    <button
+                        type="button"
+                        id="addLanguageBtn"
+                        class="add-skill-btn"
+                        disabled
+                    >
+                        + Add Language
+                    </button>
+
+                </div>
+
+                <div id="languagesContainer" class="skills-container"></div>
+
+                <div id="languageMessage" class="skill-message"></div>
+
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+</div>
+
+
+<script
+    src="/pages/profile/profile.js"
+></script>
+
+</body>
+
+</html>

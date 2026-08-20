@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KGECSIH | Available Internships</title>
+
+    <link
+        rel="stylesheet"
+        href="/pages/internship/internship.css"
+    >
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="brand-logo">K</div>
+
+        <div>
+            <h1>KGECSIH</h1>
+            <span>Internship Portal</span>
+        </div>
+
+    </div>
+
+    <div class="user-area">
+
+        <div class="user-info">
+            <strong id="navName">Student</strong>
+            <span>Profile</span>
+        </div>
+
+        <div
+            id="avatar"
+            class="avatar"
+        >
+            S
+        </div>
+
+        <button
+            id="logoutBtn"
+            class="logout-btn"
+            type="button"
+        >
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="portal-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-profile">
+
+            <div
+                id="sidebarAvatar"
+                class="sidebar-avatar"
+            >
+                S
+            </div>
+
+            <div>
+
+                <strong id="profileName">
+                    Your Profile
+                </strong>
+
+                <span id="profileEmail">
+                    student@email.com
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+                
+            <!-- PERSONAL -->
+            <a
+                href="/pages/profile/profile.html#personal"
+                class="sidebar-item"
+            >
+                
+                <span class="sidebar-icon">
+                    👤
+                </span>
+            
+                <span>
+                    Personal Information
+                </span>
+            
+            </a>
+        
+        
+            <!-- PROFESSIONAL -->
+            <a
+                href="/pages/profile/profile.html#professional"
+                class="sidebar-item"
+            >
+        
+                <span class="sidebar-icon">
+                    💼
+                </span>
+            
+                <span>
+                    Professional Information
+                </span>
+            
+            </a>
+        
+        
+            <!-- SKILLS -->
+            <a
+                href="/pages/profile/profile.html#skills"
+                class="sidebar-item"
+            >
+        
+                <span class="sidebar-icon">
+                    🛠
+                </span>
+            
+                <span>
+                    Skills
+                </span>
+            
+            </a>
+        
+        
+            <!-- INTERNSHIPS -->
+            <a
+                href="/pages/internship/internship.html"
+                class="sidebar-item active"
+            >
+        
+                <span class="sidebar-icon">
+                    📋
+                </span>
+            
+                <span>
+                    Available Internships
+                </span>
+            
+            </a>
+        
+        </nav>
+
+
+        <div class="sidebar-footer">
+            KGECSIH Internship Portal
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="content">
+
+
+        <div class="page-heading">
+
+            <span class="eyebrow">
+                OPPORTUNITIES
+            </span>
+
+            <h2>
+                Available Internships
+            </h2>
+
+            <p>
+                Find internships that match your profile.
+            </p>
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <section class="filter-card card">
+
+            <div class="filter-header">
+
+                <div>
+                    <h3>Find internships</h3>
+
+                    <p>
+                        Search and filter available opportunities.
+                    </p>
+                </div>
+
+                <button
+                    id="clearFiltersBtn"
+                    class="clear-btn"
+                    type="button"
+                >
+                    Clear Filters
+                </button>
+
+            </div>
+
+
+            <div class="filter-grid">
+
+
+                <div class="field">
+
+                    <label for="keyword">
+                        Search
+                    </label>
+
+                    <input
+                        id="keyword"
+                        type="text"
+                        placeholder="Internship, company, position..."
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="company">
+                        Company
+                    </label>
+
+                    <input
+                        id="company"
+                        type="text"
+                        placeholder="Company name"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="location">
+                        Location
+                    </label>
+
+                    <input
+                        id="location"
+                        type="text"
+                        placeholder="Kolkata, Bengaluru..."
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="workType">
+                        Work Type
+                    </label>
+
+                    <select id="workType">
+
+                        <option value="">
+                            Any
+                        </option>
+
+                        <option value="On-site">
+                            On-site
+                        </option>
+
+                        <option value="Remote">
+                            Remote
+                        </option>
+
+                        <option value="Hybrid">
+                            Hybrid
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="maxDuration">
+                        Maximum Duration
+                    </label>
+
+                    <select id="maxDuration">
+
+                        <option value="">
+                            Any
+                        </option>
+
+                        <option value="1">
+                            1 month
+                        </option>
+
+                        <option value="3">
+                            3 months
+                        </option>
+
+                        <option value="6">
+                            6 months
+                        </option>
+
+                        <option value="12">
+                            12 months
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="sortBy">
+                        Sort By
+                    </label>
+
+                    <select id="sortBy">
+
+                        <option value="match">
+                            Match
+                        </option>
+
+                        <option value="deadline">
+                            Deadline
+                        </option>
+
+                        <option value="newest">
+                            Newest
+                        </option>
+
+                        <option value="stipend">
+                            Stipend
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="sortOrder">
+                        Order
+                    </label>
+
+                    <select id="sortOrder">
+
+                        <option value="desc">
+                            Descending ↓
+                        </option>
+
+                        <option value="asc">
+                            Ascending ↑
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="applyFiltersBtn"
+                class="apply-btn"
+                type="button"
+            >
+                Search Internships
+            </button>
+
+        </section>
+
+
+
+        <!-- RESULT HEADER -->
+
+        <div class="results-header">
+
+            <div>
+
+                <strong id="resultCount">
+                    Loading...
+                </strong>
+
+                <span id="resultMessage">
+                    Finding your best matches
+                </span>
+
+            </div>
+
+
+            <button
+                id="refreshBtn"
+                class="refresh-btn"
+                type="button"
+            >
+                ↻ Refresh
+            </button>
+
+        </div>
+
+
+
+        <!-- INTERNSHIP LIST -->
+
+        <div
+            id="internshipContainer"
+            class="internship-container"
+        >
+
+            <div class="loading-state">
+
+                <div class="loading-spinner">
+                    ⟳
+                </div>
+
+                <h3>
+                    Finding internships...
+                </h3>
+
+                <p>
+                    Matching opportunities with your profile.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script
+    src="/pages/internship/internship.js"
+></script>
+
+</body>
+
+</html>

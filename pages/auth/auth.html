@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KGECSIH | Login</title>
+
+    <link
+        rel="stylesheet"
+        href="/pages/auth/auth.css"
+    >
+</head>
+
+<body>
+
+    <div class="auth-page">
+
+        <!-- ================= LEFT SIDE ================= -->
+
+        <section class="auth-showcase">
+
+            <a href="/" class="back-home">
+                ← Back to home
+            </a>
+
+            <div class="showcase-content">
+
+                <div class="brand">
+                    KGECSIH
+                </div>
+
+                <h1>
+                    Your next
+                    <span>opportunity</span>
+                    starts here.
+                </h1>
+
+                <p>
+                    Build your profile, discover internships
+                    and find opportunities that match your
+                    skills and career goals.
+                </p>
+
+                <div class="showcase-points">
+
+                    <div class="point">
+                        <div class="point-icon">🎯</div>
+
+                        <div>
+                            <strong>Personalized</strong>
+                            <small>
+                                Recommendations made for you
+                            </small>
+                        </div>
+                    </div>
+
+
+                    <div class="point">
+                        <div class="point-icon">🤖</div>
+
+                        <div>
+                            <strong>AI Powered</strong>
+                            <small>
+                                Intelligent internship matching
+                            </small>
+                        </div>
+                    </div>
+
+
+                    <div class="point">
+                        <div class="point-icon">📈</div>
+
+                        <div>
+                            <strong>Track Progress</strong>
+                            <small>
+                                Manage your career journey
+                            </small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="showcase-footer">
+                Built for students 🚀
+            </div>
+
+        </section>
+
+
+        <!-- ================= RIGHT SIDE ================= -->
+
+        <section class="auth-section">
+
+            <div class="auth-box">
+
+                <!-- TABS -->
+
+                <div class="tabs">
+
+                    <button
+                        id="loginTab"
+                        class="tab active"
+                        type="button"
+                    >
+                        Login
+                    </button>
+
+                    <button
+                        id="signupTab"
+                        class="tab"
+                        type="button"
+                    >
+                        Sign Up
+                    </button>
+
+                </div>
+
+
+                <!-- ================= LOGIN ================= -->
+
+                <form
+                    id="loginForm"
+                    class="auth-form"
+                >
+
+                    <div class="form-heading">
+
+                        <h2>
+                            Welcome back 👋
+                        </h2>
+
+                        <p>
+                            Login to continue to your account.
+                        </p>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="loginEmail">
+                            Email
+                        </label>
+
+                        <input
+                            id="loginEmail"
+                            type="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <div class="label-row">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <a href="#">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <div class="password-wrapper">
+
+                            <input
+                                id="loginPassword"
+                                type="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                data-target="loginPassword"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        Login
+                        <span>→</span>
+                    </button>
+
+
+                    <div
+                        id="loginMessage"
+                        class="message"
+                    ></div>
+
+
+                    <div class="switch-text">
+
+                        Don't have an account?
+
+                        <button
+                            type="button"
+                            id="switchToSignup"
+                        >
+                            Sign up
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- ================= SIGNUP ================= -->
+
+                <form
+                    id="signupForm"
+                    class="auth-form hidden"
+                >
+
+                    <div class="form-heading">
+
+                        <h2>
+                            Create your account 🚀
+                        </h2>
+
+                        <p>
+                            Start building your internship profile.
+                        </p>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="signupName">
+                            Full Name
+                        </label>
+
+                        <input
+                            id="signupName"
+                            type="text"
+                            placeholder="Your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="signupEmail">
+                            Email
+                        </label>
+
+                        <input
+                            id="signupEmail"
+                            type="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="signupPassword">
+                            Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                id="signupPassword"
+                                type="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                data-target="signupPassword"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            id="confirmPassword"
+                            type="password"
+                            placeholder="Repeat your password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div
+                        id="passwordStrength"
+                        class="password-strength"
+                    ></div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        Create Account
+                        <span>→</span>
+                    </button>
+
+
+                    <div
+                        id="signupMessage"
+                        class="message"
+                    ></div>
+
+
+                    <div class="switch-text">
+
+                        Already have an account?
+
+                        <button
+                            type="button"
+                            id="switchToLogin"
+                        >
+                            Login
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script
+        src="/pages/auth/auth.js"
+    ></script>
+
+</body>
+
+</html>

@@ -1,0 +1,816 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(99, 102, 241, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 70%,
+            rgba(124, 58, 237, 0.12),
+            transparent 30%
+        ),
+        #f8fafc;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border-bottom: 1px solid #e5e7eb;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    color: #4f46e5;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-buttons button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.login-btn {
+    padding: 10px 20px;
+
+    border: none;
+    background: transparent;
+
+    color: #374151;
+}
+
+.login-btn:hover {
+    color: #4f46e5;
+}
+
+.signup-btn {
+    padding: 11px 21px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #4f46e5;
+    color: white;
+}
+
+.signup-btn:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    width: min(1180px, 90%);
+
+    min-height: 620px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-text {
+    padding: 50px 0;
+
+    animation: appear 0.8s ease forwards;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    margin-bottom: 22px;
+
+    border-radius: 30px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border: 1px solid #e0e7ff;
+}
+
+.hero h1 {
+    max-width: 650px;
+
+    font-size: clamp(48px, 6vw, 76px);
+
+    line-height: 1.02;
+
+    letter-spacing: -4px;
+
+    color: #111827;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #4f46e5;
+}
+
+.hero-description {
+    max-width: 560px;
+
+    margin-top: 25px;
+
+    color: #64748b;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 13px;
+
+    margin-top: 32px;
+
+    flex-wrap: wrap;
+}
+
+.hero-buttons button {
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.primary-btn {
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.primary-btn:hover {
+    background: #4338ca;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(79, 70, 229, 0.3);
+}
+
+.secondary-btn {
+    padding: 15px 20px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.secondary-btn:hover {
+    background: #f8fafc;
+
+    border-color: #a5b4fc;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+    height: 440px;
+
+    position: relative;
+
+    border-radius: 32px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #4338ca,
+            #6366f1 50%,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 30px 80px rgba(79, 70, 229, 0.28);
+
+    animation:
+        visualAppear 1s ease forwards;
+}
+
+
+/* Decorative circles */
+
+.hero-visual::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    top: -120px;
+    right: -80px;
+}
+
+.hero-visual::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    bottom: -100px;
+    left: -70px;
+}
+
+
+/* =========================================================
+   INTERNSHIP CARD
+========================================================= */
+
+.internship-card {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 70px;
+    left: 35px;
+
+    width: 290px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.18);
+
+    animation:
+        floating 4s ease-in-out infinite;
+}
+
+.company-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.internship-info strong {
+    display: block;
+
+    color: #111827;
+
+    font-size: 15px;
+}
+
+.internship-info small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MATCH CARD
+========================================================= */
+
+.match-card {
+    position: absolute;
+
+    z-index: 3;
+
+    top: 190px;
+    right: 35px;
+
+    width: 175px;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background: white;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.2);
+
+    animation:
+        floating 4s ease-in-out 1s infinite;
+}
+
+.match-number {
+    margin-bottom: 3px;
+
+    color: #10b981;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    font-weight: 900;
+}
+
+.match-card strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #111827;
+
+    font-size: 15px;
+}
+
+.match-card small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SKILLS CARD
+========================================================= */
+
+.skills-card {
+    position: absolute;
+
+    z-index: 3;
+
+    left: 55px;
+    bottom: 65px;
+
+    display: flex;
+
+    gap: 8px;
+
+    padding: 13px;
+
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.skills-card span {
+    padding: 7px 11px;
+
+    border-radius: 8px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    padding:
+        10px 0 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 40px rgba(15, 23, 42, 0.1);
+}
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 17px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #eef2ff;
+
+    font-size: 27px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+
+    color: #111827;
+
+    font-size: 18px;
+}
+
+.feature-card p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 25px;
+
+    border-top: 1px solid #e5e7eb;
+
+    background: white;
+
+    color: #64748b;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes visualAppear {
+
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding-top: 50px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: min(600px, 100%);
+
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .login-btn {
+        padding: 8px 10px;
+    }
+
+    .signup-btn {
+        padding: 9px 13px;
+    }
+
+    .hero {
+        width: 92%;
+
+        min-height: auto;
+
+        padding:
+            55px 0;
+    }
+
+    .hero h1 {
+        font-size: 47px;
+
+        letter-spacing: -2.5px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-visual {
+        height: 350px;
+
+        border-radius: 24px;
+    }
+
+    .internship-card {
+        top: 45px;
+        left: 18px;
+
+        width: 240px;
+    }
+
+    .match-card {
+        top: 160px;
+        right: 18px;
+
+        width: 145px;
+    }
+
+    .skills-card {
+        left: 20px;
+        bottom: 35px;
+
+        gap: 5px;
+    }
+
+    .skills-card span {
+        padding: 6px 8px;
+
+        font-size: 10px;
+    }
+
+    .features {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        padding-bottom: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREEN
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .nav-buttons {
+        gap: 2px;
+    }
+
+    .login-btn {
+        padding: 8px;
+    }
+
+    .signup-btn {
+        padding: 9px 10px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .internship-card {
+        width: 220px;
+    }
+
+    .match-card {
+        width: 125px;
+
+        padding: 16px;
+    }
+
+    .match-number {
+        font-size: 32px;
+    }
+
+}
